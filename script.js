@@ -112,7 +112,7 @@ for (let i = 0; i < arrCard.length; i++) {
   Paragrph.id = "text";
   Paragrph.textContent = arrCard[i].name;
 
-  Paragrph.addEventListener("click", change);
+  
 
   const div1 = document.createElement("div");
   div1.className = "Butn";
@@ -175,9 +175,11 @@ for (let i = 0; i < arrCard.length; i++) {
   cardContainer.appendChild(anchorTag2);
 
   Product_Container.appendChild(cardContainer);
-
+  document.getElementsByTagName('p')[i].addEventListener("click", change);
   function change() {
+    console.log('hi')
     document.getElementById("text").innerText = "New Burger";
+   // document.getElementsByTagName('p')[i].innerText = "New Burger";
   }
 }
 
